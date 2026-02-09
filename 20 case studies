@@ -1,0 +1,258 @@
+31. Interest Calculator (OOP)
+class Interest {
+    double p,t,r;
+    Interest(double p,double t,double r){
+        this.p=p; this.t=t; this.r=r;
+    }
+    double calc(){ return (p*t*r)/100; }
+
+    public static void main(String[] args){
+        Interest i=new Interest(1000,2,5);
+        System.out.println(i.calc());
+    }
+}
+32. Initialization System (Constructor Overloading)
+class Student {
+    String name; int age;
+    Student(){ name="NoName"; age=0; }
+    Student(String n){ name=n; age=0; }
+    Student(String n,int a){ name=n; age=a; }
+
+    public static void main(String[] args){
+        Student s1=new Student();
+        Student s2=new Student("Ram");
+        Student s3=new Student("Sam",20);
+        System.out.println(s3.name+" "+s3.age);
+    }
+}
+33. Service Overloading (Method Overloading)
+class Calc {
+    int add(int a,int b){ return a+b; }
+    int add(int a,int b,int c){ return a+b+c; }
+
+    public static void main(String[] args){
+        Calc c=new Calc();
+        System.out.println(c.add(2,3));
+        System.out.println(c.add(1,2,3));
+    }
+}
+34. Organizational Hierarchy (Single Inheritance)
+class Company{
+    void show(){ System.out.println("Company"); }
+}
+class Employee extends Company{
+    void emp(){ System.out.println("Employee"); }
+
+    public static void main(String[] args){
+        Employee e=new Employee();
+        e.show(); e.emp();
+    }
+}
+35. Academic Structure (Multilevel Inheritance)
+class College{ void c(){System.out.println("College");}}
+class Dept extends College{ void d(){System.out.println("Dept");}}
+class Student extends Dept{
+    void s(){System.out.println("Student");}
+    public static void main(String[] args){
+        Student st=new Student();
+        st.c(); st.d(); st.s();
+    }
+}
+36. Feature Enhancement (Method Overriding)
+class Parent{
+    void show(){ System.out.println("Parent"); }
+}
+class Child extends Parent{
+    void show(){ System.out.println("Child"); }
+
+    public static void main(String[] args){
+        Parent p=new Child();
+        p.show();
+    }
+}
+
+37. Secure Data Module (Encapsulation)
+
+class User{
+    private int pin;
+    public void setPin(int p){ pin=p; }
+    public int getPin(){ return pin; }
+
+    public static void main(String[] args){
+        User u=new User();
+        u.setPin(1234);
+        System.out.println(u.getPin());
+    }
+}
+38. Shape Processing (Abstraction)
+abstract class Shape{
+    abstract double area();
+}
+class Circle extends Shape{
+    double r=5;
+    double area(){ return 3.14*r*r; }
+
+    public static void main(String[] args){
+        Shape s=new Circle();
+        System.out.println(s.area());
+    }
+}
+39. Payment Gateway (Interface)
+
+interface Pay{
+    void pay();
+}
+class GPay implements Pay{
+    public void pay(){ System.out.println("Paid via GPay"); }
+
+    public static void main(String[] args){
+        Pay p=new GPay();
+        p.pay();
+    }
+}
+
+40. Runtime Polymorphism
+
+class A{
+    void run(){ System.out.println("A"); }
+}
+class B extends A{
+    void run(){ System.out.println("B"); }
+
+    public static void main(String[] args){
+        A obj=new B();
+        obj.run();
+    }
+}
+41. Calculation Safety (try-catch)
+class Div {
+    public static void main(String[] args){
+        try{
+            int a=10/0;
+        }catch(Exception e){
+            System.out.println("Error");
+        }
+    }
+}
+
+42. Robust Error Handler (Multiple catch)
+
+class MultiCatch {
+    public static void main(String[] args){
+        try{
+            int a[]=new int[2];
+            a[5]=10;
+        }catch(ArithmeticException e){
+            System.out.println("Math Error");
+        }catch(ArrayIndexOutOfBoundsException e){
+            System.out.println("Index Error");
+        }
+    }
+}
+43. Resource Cleanup (finally)
+
+class FinallyDemo{
+    public static void main(String[] args){
+        try{
+            int x=10/2;
+        }finally{
+            System.out.println("Cleanup done");
+        }
+    }
+}
+44. Validation Framework (Custom Exception)
+class MyEx extends Exception{
+    MyEx(String msg){ super(msg); }
+}
+class Test{
+    public static void main(String[] args){
+        try{
+            throw new MyEx("Invalid Input");
+        }catch(Exception e){
+            System.out.println(e);
+        }
+    }
+}
+45. Manual Exception Trigger (throw)
+class ThrowDemo{
+    static void check(int age){
+        if(age<18) throw new ArithmeticException("Not Eligible");
+        else System.out.println("Eligible");
+    }
+    public static void main(String[] args){
+        check(15);
+    }
+}
+46. Task Scheduler (Thread class)
+
+class T1 extends Thread{
+    public void run(){class J extends Thread{
+    public void run(){
+        System.out.println("Task done");
+    }
+    public static void main(String[] args)throws Exception{
+        J t1=new J();
+        J t2=new J();
+        t1.start();
+        t1.join();
+        t2.start();
+    }
+}
+        System.out.println("Thread Running");
+    }
+    public static void main(String[] args){
+        T1 t=new T1();
+        t.start();
+    }
+}
+47. Lightweight Thread (Runnable)
+
+class R implements Runnable{
+    public void run(){
+        System.out.println("Runnable Thread");
+    }
+    public static void main(String[] args){
+        Thread t=new Thread(new R());
+        t.start();
+    }
+}
+48. Concurrent Processing (Multiple Threads)
+
+class A1 extends Thread{
+    public void run(){ System.out.println("A1"); }
+}
+class B1 extends Thread{
+    public void run(){ System.out.println("B1"); }
+
+    public static void main(String[] args){
+        new A1().start();
+        new B1().start();
+    }
+}
+
+49. Priority Execution Engine
+
+class P extends Thread{
+    public void run(){ System.out.println(getPriority()); }
+
+    public static void main(String[] args){
+        P t1=new P(); P t2=new P();
+        t1.setPriority(1);
+        t2.setPriority(10);
+        t1.start(); t2.start();
+    }
+}
+50. Dependency Execution (join)
+
+class J extends Thread{
+    public void run(){
+        System.out.println("Task done");
+    }
+    public static void main(String[] args)throws Exception{
+        J t1=new J();
+        J t2=new J();
+        t1.start();
+        t1.join();
+        t2.start();
+    }
+}
