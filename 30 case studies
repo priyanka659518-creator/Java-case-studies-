@@ -1,0 +1,462 @@
+1. Greeting Module (without println)
+class GreetingPriyanka {
+    public static void main(String[] args) {
+        System.out.print("Welcome Priyanka to Java World!");
+    }
+}
+2.Data Exchange System (Swap without extra variable)
+class SwapPriyanka {
+    public static void main(String[] args) {
+        int a = 10, b = 20;
+
+        a = a + b;
+        b = a - b;
+        a = a - b;
+
+        System.out.println("Priyanka Swap Result:");
+        System.out.println("a = " + a);
+        System.out.println("b = " + b);
+    }
+}
+3.Number Classification Tool (Even/Odd)
+import java.util.Scanner;
+
+class EvenOddPriyanka {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number Priyanka: ");
+        int n = sc.nextInt();
+
+        if(n % 2 == 0)
+            System.out.println("Priyanka -> Even Number");
+        else
+            System.out.println("Priyanka -> Odd Number");
+    }
+}
+4. Comparison Engine (Max of 3 numbers)
+import java.util.Scanner;
+
+class MaxPriyanka {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter 3 numbers Priyanka: ");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+
+        int max;
+        if(a > b && a > c)
+            max = a;
+        else if(b > c)
+            max = b;
+        else
+            max = c;
+
+        System.out.println("Priyanka Highest Value = " + max);
+    }
+}
+5. Security Code Validator (Palindrome)
+
+import java.util.Scanner;
+
+class PalindromePriyanka {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Security Code Priyanka: ");
+        int num = sc.nextInt();
+
+        int original = num, rev = 0;
+
+        while(num > 0){
+            rev = rev * 10 + (num % 10);
+            num = num / 10;
+        }
+
+        if(original == rev)
+            System.out.println("Priyanka Code is VALID");
+        else
+            System.out.println("Priyanka Code is INVALID");
+    }
+}
+
+6. Inventory Factor Calculator (Factorial)
+import java.util.Scanner;
+
+class FactorialPriyanka {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter item count Priyanka: ");
+        int n = sc.nextInt();
+
+        long fact = 1;
+        for(int i=1; i<=n; i++){
+            fact = fact * i;
+        }
+
+        System.out.println("Priyanka Factorial = " + fact);
+    }
+}
+7. Series Generator (Fibonacci)
+import java.util.Scanner;
+
+class FibonacciPriyanka {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter terms Priyanka: ");
+        int n = sc.nextInt();
+
+        int a = 0, b = 1;
+
+        System.out.print("Priyanka Series: ");
+        for(int i=1; i<=n; i++){
+            System.out.print(a + " ");
+            int c = a + b;
+            a = b;
+            b = c;
+        }
+    }
+}
+8. Quality Check System (Prime)
+import java.util.Scanner;
+
+class PrimePriyanka {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number Priyanka: ");
+        int n = sc.nextInt();
+
+        boolean prime = true;
+
+        if(n <= 1) prime = false;
+
+        for(int i=2; i<=n/2; i++){
+            if(n % i == 0){
+                prime = false;
+                break;
+            }
+        }
+
+        if(prime)
+            System.out.println("Priyanka -> Prime Number");
+        else
+            System.out.println("Priyanka -> Not Prime Number");
+    }
+}
+9. Reverse Processing Unit (Reverse number)
+import java.util.Scanner;
+
+class ReversePriyanka {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number Priyanka: ");
+        int num = sc.nextInt();
+
+        int rev = 0;
+        while(num > 0){
+            rev = rev * 10 + (num % 10);
+            num = num / 10;
+        }
+
+        System.out.println("Priyanka Reversed = " + rev);
+    }
+}
+10. Digit Analyzer (Sum of digits)
+
+import java.util.Scanner;
+
+class DigitSumPriyanka {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number Priyanka: ");
+        int num = sc.nextInt();
+
+        int sum = 0;
+        while(num > 0){
+            sum += num % 10;
+            num = num / 10;
+        }
+
+        System.out.println("Priyanka Digit Sum = " + sum);
+    }
+}
+11. Character Encoding Tool
+import java.util.*;
+class P11 {
+ public static void main(String[] a){
+  Scanner s=new Scanner(System.in);
+  char c=s.next().charAt(0);
+  System.out.println((int)c);
+ }
+}
+12. Text Analy
+import java.util.*;
+class P12{
+ public static void main(String[] a){
+  Scanner s=new Scanner(System.in);
+  String t=s.nextLine().toLowerCase();
+  int v=0,c=0;
+  for(char ch:t.toCharArray()){
+   if(ch>='a'&&ch<='z'){
+    if("aeiou".indexOf(ch)!=-1) v++;
+    else c++;
+   }
+  }
+  System.out.println(v+" "+c);
+ }
+}
+13. Temperature Converter
+
+import java.util.*;
+class P13{
+ public static void main(String[] a){
+  Scanner s=new Scanner(System.in);
+  double c=s.nextDouble();
+  System.out.println((c*9/5)+32);
+ }
+}
+14. Power Engine
+import java.util.*;
+class P14{
+ public static void main(String[] a){
+  Scanner s=new Scanner(System.in);
+  int b=s.nextInt(), p=s.nextInt(), r=1;
+  for(int i=0;i<p;i++) r*=b;
+  System.out.println(r);
+ }
+}
+15. Star Pattern
+import java.util.*;
+class P15{
+ public static void main(String[] a){
+  Scanner s=new Scanner(System.in);
+  int n=s.nextInt();
+  for(int i=1;i<=n;i++){
+   for(int j=1;j<=i;j++) System.out.print("*");
+   System.out.println();
+  }
+ }
+}
+16. Max in Array
+import java.util.*;
+class P16{
+ public static void main(String[] a){
+  Scanner s=new Scanner(System.in);
+  int n=s.nextInt(), m=Integer.MIN_VALUE;
+  for(int i=0;i<n;i++){
+   int x=s.nextInt();
+   if(x>m) m=x;
+  }
+  System.out.println(m);
+ }
+}
+17. Smallest & 2nd Smallest
+import java.util.*;
+class P17{
+ public static void main(String[] a){
+  Scanner s=new Scanner(System.in);
+  int n=s.nextInt();
+  int s1=Integer.MAX_VALUE,s2=Integer.MAX_VALUE;
+  for(int i=0;i<n;i++){
+   int x=s.nextInt();
+   if(x<s1){s2=s1; s1=x;}
+   else if(x<s2 && x!=s1) s2=x;
+  }
+  System.out.println(s1+" "+s2);
+ }
+}
+
+18. Reverse Array
+import java.util.*;
+class P18{
+ public static void main(String[] a){
+  Scanner s=new Scanner(System.in);
+  int n=s.nextInt();
+  int[] arr=new int[n];
+  for(int i=0;i<n;i++) arr[i]=s.nextInt();
+  for(int i=n-1;i>=0;i--) System.out.print(arr[i]+" ");
+ }
+}
+19. Sum & Average
+import java.util.*;
+class P19{
+ public static void main(String[] a){
+  Scanner s=new Scanner(System.in);
+  int n=s.nextInt(), sum=0;
+  for(int i=0;i<n;i++) sum+=s.nextInt();
+  System.out.println(sum);
+  System.out.println(sum/(double)n);
+ }
+}
+20. Remove Duplicates
+import java.util.*;
+class P20{
+ public static void main(String[] a){
+  Scanner s=new Scanner(System.in);
+  int n=s.nextInt();
+  LinkedHashSet<Integer> set=new LinkedHashSet<>();
+  for(int i=0;i<n;i++) set.add(s.nextInt());
+  for(int x:set) System.out.print(x+" ");
+ }
+}
+21. Sorting Engine (Ascending – no built-in sort)
+class SortArray {
+    public static void main(String[] args) {
+        int[] a = {5, 2, 9, 1, 3};
+        for(int i=0;i<a.length;i++){
+            for(int j=i+1;j<a.length;j++){
+                if(a[i] > a[j]){
+                    int t = a[i]; a[i] = a[j]; a[j] = t;
+                }
+            }
+        }
+        for(int x : a) System.out.print(x+" ");
+    }
+}
+22. Frequency Analyzer
+class Frequency {
+    public static void main(String[] args) {
+        int[] a = {1,2,2,3,1,4};
+        boolean[] v = new boolean[a.length];
+
+        for(int i=0;i<a.length;i++){
+            if(v[i]) continue;
+            int count = 1;
+            for(int j=i+1;j<a.length;j++){
+                if(a[i]==a[j]){
+                    count++; v[j]=true;
+                }
+            }
+            System.out.println(a[i]+" -> "+count);
+        }
+    }
+}
+23. Data Validation System (Two arrays same?)
+class ArrayCompare {
+    public static void main(String[] args) {
+        int[] a = {1,2,3};
+        int[] b = {1,2,3};
+        boolean same = true;
+
+        if(a.length != b.length) same=false;
+        else{
+            for(int i=0;i<a.length;i++){
+                if(a[i]!=b[i]) { same=false; break; }
+            }
+        }
+        System.out.println(same ? "Same" : "Not Same");
+    }
+}
+24. Data Merger
+class MergeArray {
+    public static void main(String[] args) {
+        int[] a = {1,2,3};
+        int[] b = {4,5};
+        int[] c = new int[a.length+b.length];
+
+        int k=0;
+        for(int i=0;i<a.length;i++) c[k++]=a[i];
+        for(int i=0;i<b.length;i++) c[k++]=b[i];
+
+        for(int x:c) System.out.print(x+" ");
+    }
+}
+25. Palindrome Check
+class Palindrome {
+    public static void main(String[] args) {
+        String s="madam";
+        String rev="";
+        for(int i=s.length()-1;i>=0;i--) rev+=s.charAt(i);
+        System.out.println(s.equals(rev)?"Palindrome":"Not Palindrome");
+    }
+}
+
+26. Character Counter
+
+class CharCount {
+    public static void main(String[] args) {
+        String s="banana";
+        char ch='a';
+        int count=0;
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i)==ch) count++;
+        }
+        System.out.println(count);
+    }
+}
+27. Text Reversal (No StringBuilder / reverse)
+class ReverseString {
+    public static void main(String[] args) {
+        String s="Java";
+        char[] a=s.toCharArray();
+        int i=0,j=a.length-1;
+        while(i<j){
+            char t=a[i]; a[i]=a[j]; a[j]=t;
+            i++; j--;
+        }
+        System.out.println(new String(a));
+    }
+}
+
+28. Sentence Analyzer (Longest word)
+
+class LongestWord {
+    public static void main(String[] args) {
+        String s="Java is very powerful language";
+        String[] w=s.split(" ");
+        String longWord=w[0];
+        for(String x:w){
+            if(x.length()>longWord.length())
+                longWord=x;
+        }
+        System.out.println(longWord);
+    }
+}
+29. Text Formatter (Remove spaces)
+class RemoveSpace {
+    public static void main(String[] args) {
+        String s="Java is easy";
+        String r="";
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i)!=' ') r+=s.charAt(i);
+        }
+        System.out.println(r);
+    }
+}
+30. Duplicate Character Detector
+
+class DuplicateChar {
+    public static void main(String[] args) {
+        String s="programming";
+        char[] a=s.toCharArray();
+        for(int i=0;i<a.length;i++){
+            for(int j=i+1;j<a.length;j++){
+                if(a[i]==a[j]){
+                    System.out.println(a[i]);
+                    break;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
