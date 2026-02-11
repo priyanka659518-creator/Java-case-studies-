@@ -1,0 +1,6 @@
+. Greeting Module (without println)
+class GreetingPriyanka {
+    public static void main(String[] args) {
+        System.out.print("Welcome Priyanka to Java World!");
+    }
+}
