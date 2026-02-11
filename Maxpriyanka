@@ -1,0 +1,23 @@
+Comparison Engine (Max of 3 numbers)
+import java.util.Scanner;
+
+class MaxPriyanka {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter 3 numbers Priyanka: ");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+
+        int max;
+        if(a > b && a > c)
+            max = a;
+        else if(b > c)
+            max = b;
+        else
+            max = c;
+
+        System.out.println("Priyanka Highest Value = " + max);
+    }
+}
