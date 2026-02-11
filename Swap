@@ -1,0 +1,14 @@
+Data Exchange System (Swap without extra variable)
+class SwapPriyanka {
+    public static void main(String[] args) {
+        int a = 10, b = 20;
+
+        a = a + b;
+        b = a - b;
+        a = a - b;
+
+        System.out.println("Priyanka Swap Result:");
+        System.out.println("a = " + a);
+        System.out.println("b = " + b);
+    }
+}
