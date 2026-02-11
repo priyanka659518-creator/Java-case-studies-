@@ -1,0 +1,19 @@
+Digit Analyzer (Sum of digits)
+
+import java.util.Scanner;
+
+class DigitSumPriyanka {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number Priyanka: ");
+        int num = sc.nextInt();
+
+        int sum = 0;
+        while(num > 0){
+            sum += num % 10;
+            num = num / 10;
+        }
+
+        System.out.println("Priyanka Digit Sum = " + sum);
+    }
+}
