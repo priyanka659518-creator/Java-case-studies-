@@ -1,0 +1,17 @@
+Inventory Factor Calculator (Factorial)
+import java.util.Scanner;
+
+class FactorialPriyanka {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter item count Priyanka: ");
+        int n = sc.nextInt();
+
+        long fact = 1;
+        for(int i=1; i<=n; i++){
+            fact = fact * i;
+        }
+
+        System.out.println("Priyanka Factorial = " + fact);
+    }
+}
