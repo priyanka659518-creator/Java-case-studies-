@@ -1,0 +1,12 @@
+Interest Calculator (OOP)
+class Interest {
+    double p,t,r;
+    Interest(double p,double t,double r){
+        this.p=p; this.t=t; this.r=r;
+    }
+    double calc(){ return (p*t*r)/100; }
+
+    public static void main(String[] args){
+        Interest i=new Interest(1000,2,5);
+        System.out.println(i.calc());
+    }
