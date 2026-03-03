@@ -1,0 +1,13 @@
+Concurrent Processing (Multiple Threads)
+
+class A1 extends Thread{
+    public void run(){ System.out.println("A1"); }
+}
+class B1 extends Thread{
+    public void run(){ System.out.println("B1"); }
+
+    public static void main(String[] args){
+        new A1().start();
+        new B1().start();
+    }
+}
