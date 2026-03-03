@@ -1,0 +1,14 @@
+Dependency Execution (join)
+
+class J extends Thread{
+    public void run(){
+        System.out.println("Task done");
+    }
+    public static void main(String[] args)throws Exception{
+        J t1=new J();
+        J t2=new J();
+        t1.start();
+        t1.join();
+        t2.start();
+    }
+}
