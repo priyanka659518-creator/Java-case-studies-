@@ -1,0 +1,9 @@
+Academic Structure (Multilevel Inheritance)
+class College{ void c(){System.out.println("College");}}
+class Dept extends College{ void d(){System.out.println("Dept");}}
+class Student extends Dept{
+    void s(){System.out.println("Student");}
+    public static void main(String[] args){
+        Student st=new Student();
+        st.c(); st.d(); st.s();
+    }
