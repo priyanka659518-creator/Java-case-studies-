@@ -1,0 +1,13 @@
+Secure Data Module (Encapsulation)
+
+class User{
+    private int pin;
+    public void setPin(int p){ pin=p; }
+    public int getPin(){ return pin; }
+
+    public static void main(String[] args){
+        User u=new User();
+        u.setPin(1234);
+        System.out.println(u.getPin());
+    }
+}
