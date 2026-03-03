@@ -1,0 +1,10 @@
+Resource Cleanup (finally)
+
+class FinallyDemo{
+    public static void main(String[] args){
+        try{
+            int x=10/2;
+        }finally{
+            System.out.println("Cleanup done");
+        }
+    }
